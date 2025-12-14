@@ -1,0 +1,78 @@
+{% include 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlameWatch</title>
+</head>
+
+    <body style="background-color: #810D0D;">
+        <div class="container" style="display: flex; align-items: center; background-color: #810D0D;padding-top: 50px; padding-bottom:40px;">
+            <div class="report-image" style="background-image: url('{% static 'images/fi.avif' %}'); width: 50%; height: 500PX; PADDING-TOP:30PX; padding-left: 20px; background-color: #404040;"></div>
+            <div class="intro-text" style="width: 50%; padding: 20px; color: #FFFFFF;">
+                <p style="color: #d2b356; font-size: 46px;"><b>Welcome to our progress tracker<b></p>
+                 
+                    <p>1. Your report will be immediately forwarded to the nearest fire brigade service for prompt action.</p>
+                    <p>2. Ensure you input the correct details provided during the initial report, including the location and nature of the fire incident.</p>
+                    <p>3. Our system provides real-time updates on the progress of your request.</p>
+                    <p>4. Your cooperation is vital in ensuring the safety of our community. Together, let's work towards swift action and resolution.</p>
+            </div>
+        </div>
+
+
+    
+<br>
+<div class="container mt-5" style=" padding-bottom: 40px;">
+    <form method="post">
+        {% csrf_token %}
+        <div class="card my-4" style="border : 2px ridge green;">
+            <h5 class="card-header text-info">Search Report by Name/Mobile No./Location</h5>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" name="searchdata" class="form-control"
+                           placeholder="Enter Name/Mobile No/Location"
+                           required>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-search" style="height: 25px"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    {% if firereport %}
+    <div class="card-body" style="background-color: white;">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+            <tr >
+                <th>#</th>
+                <th>Name</th>
+                <th>Mobile Number</th>
+                <th>Location</th>
+                <th>Reporting Time</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for i in firereport %}
+            <tr >
+                <td>{{forloop.counter}}</td>
+                <td>{{i.FullName}}</td>
+                <td>{{i.MobileNumber}}</td>
+                <td>{{i.Location}}</td>
+                <td>{{i.Postingdate}}</td>
+                <td><a class="btn btn-primary" href="{% url 'viewStatusDetails' i.id %}"><i class="fa fa-eye"></i></a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
+
+{% include 'footer.html' %}

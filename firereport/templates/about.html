@@ -1,0 +1,302 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!--Page Title-->
+    <title>FlameWatch</title>
+
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" title="Favicon"/>
+
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Namari Color CSS -->
+    <link rel="stylesheet" href="{% static 'css/namari-color.css' %}">
+
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+    <!-- Animate CSS-->
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css">
+
+    <!--Google Webfonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!--End of Preloader-->
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5" style="background-color: #404040;" >
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+<!--Logo-->
+<div id="logo">
+
+    <!--Logo text that is shown on the banner-->
+    <h1 id="banner-logo" style="color: #FFFFFF;">
+        FlameWatch</h1>
+    <!--End of Banner Logo-->
+
+
+</div>
+<!--End of Logo-->
+
+<aside style="text-align: center; padding-top: 20px;">
+    <!-- Admin Login Button -->
+    <div class="#">
+        <a href="{% url 'admin_login' %}" title="Admin Login" style="display: inline-block; text-decoration: none;">
+            <i class="fa fa-user" style="color: white; font-size: 24px; display: inline-block; vertical-align: middle;" onmouseover="this.style.color='#d2b356';" onmouseout="this.style.color='white';"></i>
+            <span style="color: white; margin-left: 5px; display: inline-block; vertical-align: middle;" onmouseover="this.style.color='#d2b356';" onmouseout="this.style.color='white';">LOGIN</span>
+        </a>
+    </div>
+</aside>
+
+
+
+
+
+
+                    <!--Main Navigation-->
+                    <nav id="nav-main" >
+                        <ul>
+                            <li>
+                                <a href="{% url 'index' %}" style="color: #FFFFFF;">Home</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'about' %}" style="color: #FFFFFF;">About</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'reporting' %}" style="color: #FFFFFF;">Reporting</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'viewStatus' %}" style="color: #FFFFFF;">Viewstatus</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <!--End of Main Navigation-->
+
+                    <div id="nav-trigger"><span></span></div>
+                    <nav id="nav-mobile"></nav>
+
+                </div>
+            </div>
+        </div><!--End of Header-->
+
+ 
+        <main id="content" >
+        <!--Content Section-->
+        <div id="services" class="scrollto clearfix"style="background-color: #404040;">
+
+            <div class="row no-padding-bottom clearfix" style="background-color: #404040;" >
+
+
+                <!--Content Left Side-->
+                <div class="col-3" style="width:800px;">
+                    <!-- About Page Info -->
+                    <div class="about-info">
+                        <h2 style="color: silver;">About FlameWatch</h2>
+                        <p style="color: #FFFFFF;">Welcome to FlameWatch, your trusted platform for reporting fire incidents and managing emergency services. FlameWatch is dedicated to facilitating seamless communication between users and fire department administrators, ensuring swift and efficient response to emergencies.</p>
+                        <p style="color: #FFFFFF;">Whether you're a concerned citizen reporting a fire incident or a fire department administrator managing your team's resources, FlameWatch offers intuitive features to streamline the process and enhance public safety.</p>
+                        <h3 style="color: #d2b356;">For Users</h3>
+                        <p style="color: #FFFFFF;">As a user of FlameWatch, you can:</p>
+                        <ul style="color: #FFFFFF;">
+                            <li>Report fire incidents quickly and accurately through our user-friendly interface.</li>
+                            <li>Track the status of your fire incident report in real-time.</li>
+                            <li>Receive updates and notifications regarding the progress of your request.</li>
+                        </ul>
+                        <h3 style="color: #d2b356;">For Fire Department Administrators</h3>
+                        <p style="color: #FFFFFF;">As a fire department administrator using FlameWatch, you can:</p>
+                        <ul style="color: #FFFFFF;">
+                            <li>Efficiently manage your team by assigning tasks and monitoring their progress.</li>
+                            <li>Access comprehensive data analysis tools to improve resource management and planning.</li>
+                            <li>Take swift action on reported fire incidents and coordinate response efforts effectively.</li>
+                        </ul>
+                        <p style="color: silver;">FlameWatch aims to revolutionize fire reporting and emergency response management, empowering both users and fire department administrators with the tools they need to ensure public safety.</p>
+                    </div>
+                    <!-- End of About Page Info -->
+                    <!-- User Testimonial -->
+                    <blockquote class="testimonial text-right bigtest">
+                        <q style="color: #FFFFFF;">FlameWatch has been a game-changer for our department. It's incredibly intuitive, allowing us to 
+                            report incidents swiftly and accurately. The data analysis tools provided have significantly improved our resource 
+                            management and planning. Overall, it's a must-have tool for any fire department looking to enhance their operations.</q>
+                        <footer style="color: #d2b356;">— Jashkaran Singh, Department Head</footer>
+                    </blockquote>
+                    <!-- End of User Testimonial -->
+                </div>
+                
+                <div class="col-3">
+                    <img src="{% static 'images/op.jpg' %}" alt="Dancer" style="height: 600px; width: 900px; !important"/>
+
+
+
+                </div>
+                <!--End Content Left Side-->
+
+
+
+        <!--End of Clients-->
+
+        <!--Pricing Tables-->
+        <section id="pricing" class="secondary-color text-center scrollto clearfix " style=" background-color: #810D0D; padding-bottom: 80px;">
+            <div class="row clearfix">
+
+                <div class="section-heading">
+                    <h3>YOUR CHOICE</h3>
+                    <h2 class="section-title" style="color: #d2b356;">OUR TEAM MEMBERS</h2>
+                </div>
+
+                <!--Pricing Block-->
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="pricing-block-content">
+                        <h3>Training Head</h3>
+                        <div class="pricing">
+                            <div class="price"><img src="{% static 'images/hony.png' %}" alt="Price Image"></div>
+                        </div>
+                        <ul>
+                            <li>Manekas singh</li>
+                            <li>Experiance: 3.5 years</li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <!--End Pricing Block-->
+
+                <!--Pricing Block-->
+                <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="pricing-block-content">
+                        <h3>Administrators</h3>
+                        <p class="pricing-sub"></p>
+                        <div class="pricing">
+                            <div class="price"><img src="{% static 'images/jash.jpg' %}" alt="Price Image"></div>
+                        </div>
+                        <ul>
+                            <li>jashkaran singh</li>
+                            <li>Experiance: 5 years</li>
+
+                        </ul>
+                
+                    </div>
+                </div>
+                <!--End Pricing Block-->
+
+                <!--Pricing Block-->
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="pricing-block-content">
+                        <h3>Mission Head</h3>
+                        <div class="pricing">
+                            <div class="price"><img src="{% static 'images/guri1.jpg' %}" alt="Price Image"></div>
+                        </div>
+                        <ul>
+                            <li>Gurkirat singh</li>
+                            <li>Experiance: 4 years</li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <!--End Pricing Block-->
+            </div>
+        </section>
+        <!--End of Pricing Tables-->
+
+
+
+
+   <!--Footer-->
+<footer id="landing-footer" class="clearfix" style="background-color: #404040;">
+    <div class="row clearfix">
+
+        <!-- Website Information -->
+        <div class="col-2">
+            <p id="copyright">Provided by <a href="#">FlameWatch</a></p>
+            <!-- Address Icon -->
+            <p><i class="fa fa-map-marker"></i> Address: 123 Main Street, City, Country</p>
+            <!-- Helpline Icon -->
+            <p><i class="fa fa-phone"></i> Helpline: 123-456-7890</p>
+        </div>
+
+        <!--Social Icons in Footer-->
+        <ul class="col-2 social-icons">
+            <li>
+                <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
+                    <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" title="Google+" href="http://google.com/+username">
+                    <i class="fa fa-google-plus fa-1x"></i><span>Google+</span>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" title="Twitter" href="http://www.twitter.com/username">
+                    <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" title="Instagram" href="http://www.instagram.com/username">
+                    <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" title="behance" href="http://www.behance.net">
+                    <i class="fa fa-behance fa-1x"></i><span>Behance</span>
+                </a>
+            </li>
+        </ul>
+        <!--End of Social Icons in Footer-->
+    </div>
+</footer>
+<!--End of Footer-->
+
+
+
+</div>
+
+<!-- JavaScript Files -->
+<script src="{% static 'js/jquery.1.8.3.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/featherlight.min.js' %}"></script>
+<script src="{% static 'js/featherlight.gallery.min.js' %}"></script>
+<script src="{% static 'js/jquery.enllax.min.js' %}"></script>
+<script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'js/jquery.stickyNavbar.min.js' %}"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/images-loaded.min.js' %}"></script>
+<script src="{% static 'js/lightbox.min.js' %}"></script>
+<script src="{% static 'js/site.js' %}"></script>
+
+
+
+</body>
+</html>

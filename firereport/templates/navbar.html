@@ -1,0 +1,58 @@
+{% load static %}
+
+<title>FlameWatch</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="{% static 'fi.ico' %}" title="Favicon"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+
+<nav class="navbar navbar-expand-md bg-custom navbar-dark" style="border-color: #404040;" >
+  <!-- Brand -->
+
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="border-color: #404040;">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar" style="padding-right: 490px; padding-top: 20px; font-size: 14px; background-color: #404040; border-color: #404040; margin:0; ">
+    <ul class="navbar-nav pl-5 ml-auto" style="background-color: #404040;">
+      <li>    <h1 class="#" style="color: #FFFFFF; padding-right: 350px; padding-bottom:10px;   font-size: 30px;"><b>
+        FlameWatch</b></h1> 
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'index' %}" style=" padding-top: 20px;">HOME</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}" style=" padding-top: 20px;" >ABOUT</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'reporting' %}" style=" padding-top: 20px;">REPORTING</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'viewStatus' %}" style="display: inline-block; padding-top: 20px;">VIEWSTATUS</a>
+
+      </li>
+      <li style="text-align: center; padding-top: 20px; padding-left: 350px; font-size: 12px;">
+        <a href="{% url 'admin_login' %}" title="Admin Login" style="text-decoration: none; display: inline-block; white-space: nowrap;">
+            <i class="fa fa-user" style="color: white; font-size: 22px; vertical-align: middle; " onmouseover="this.style.color='#d2b356';" onmouseout="this.style.color='white';"></i>
+            <span style="color: white; margin-left: 5px; vertical-align: middle;" onmouseover="this.style.color='#d2b356';" onmouseout="this.style.color='white';">LOGIN</span>
+        </a> 
+    </li>
+    
+    
+
+    </ul>
+  </div>
+</nav>
